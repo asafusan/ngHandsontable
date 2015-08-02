@@ -149,7 +149,9 @@ angular.module('ngHandsontable.directives', [])
                   column['data'] = attributes[i];
                 }
                 else {
-                  column[i] = scope.$eval(attributes[i]);
+                  if (i !== 'ngRepeat') {
+                    column[i] = scope.$eval(attributes[i]);
+                  }
                 }
               }
             }
