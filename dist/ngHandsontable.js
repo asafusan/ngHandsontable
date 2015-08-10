@@ -295,7 +295,9 @@ angular.module('ngHandsontable.directives', [])
                   column['data'] = attributes[i];
                 }
                 else {
+                  if (i!=='ngReapet') {
                   column[i] = scope.$eval(attributes[i]);
+                  }
                 }
               }
             }
